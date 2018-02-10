@@ -2,7 +2,7 @@
 class Accessories extends CSV_Model
 {
 
-    public $itemID;
+    public $ItemID;
     public $name;
     public $category;
     public $imageLocation;
@@ -12,6 +12,6 @@ class Accessories extends CSV_Model
 
     public function __construct()
     {
-        parent::__construct("../data/BowlItem.csv", 'itemID');
+        parent::__construct("../data/BowlItem.csv", 'ItemID');
     }
 }

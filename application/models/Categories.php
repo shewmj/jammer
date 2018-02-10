@@ -1,7 +1,7 @@
 <?php
 class Categories extends CSV_Model
 {
-		
+
 	public $setID;
 	public $name;
 	public $Protein;
@@ -15,4 +15,3 @@ class Categories extends CSV_Model
 		parent::__construct("../data/BowlSet.csv", 'setID');
 	}
 }
-
