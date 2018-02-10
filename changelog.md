@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add initial RDB (.csv) files for Bowl Items, Categories, Bowl Sets
 - Create Data folder
 - Forked project from GitHub https://github.com/jedi-academy/CodeIgniter3.1-starter4
+- Added Accessories.php model
 
 ### Modified
 - Updated BowlItems.csv to include links to correct images.
