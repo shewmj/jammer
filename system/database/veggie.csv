@@ -1,0 +1,5 @@
+VeggieID, Name, Calories, Salt, Price
+V1, Carrots, 100, 100, 1.00
+V2, Cucumber, 125, 125, 2.00
+V3, Tomato, 90, 75, 3.00
+V4, Lettuce, 75, 50, 4.00

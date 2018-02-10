@@ -1,0 +1,5 @@
+ToppingID, Name, Calories, Salt, Price
+T1, Seaweed, 50, 100, 1.00
+T2, Tobiko, 50, 125, 2.00
+T3, Corn Flakes, 50, 25, 3.00
+T4, Sesame Seed, 50, 50, 4.00
