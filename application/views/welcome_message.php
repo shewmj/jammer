@@ -1,14 +1,45 @@
-<h1>Welcome to CodeIgniter!</h1>
 
-<div id="body">
-	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
 
-	<p>If you would like to edit this page you'll find it located at:</p>
-	<code>application/views/welcome_message.php</code>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link1<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link2</a></li>
 
-	<p>The corresponding controller for this page is found at:</p>
-	<code>application/controllers/Welcome.php</code>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
-	<p>If you are exploring CodeIgniter for the very first time, you should 
-		start by reading the <a href="http://www.codeigniter.com/user_guide/">User Guide</a>.</p>
+<h1 class="text-center">How Salty?</h1>
+<div class="col-lg-12">
+    <div class="col-lg-3">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Dropdown Example
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Chicken Teriyaki with Rice</a></li>
+                <li><a href="#">Chicken Strips with Fries</a></li>
+                <li><a href="#">Salmon Sashimi with cucumbers   </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-9 picture">
+        Picture
+    </div>
 </div>
