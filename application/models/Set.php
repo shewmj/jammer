@@ -9,9 +9,9 @@ class Set extends CSV_Model
     public $Grain;
     public $Veggie;
     public $Sauce;
- 
+
     public function __construct()
     {
-        parent::__construct("../data/BowlSet.csv", 'itemID');
+        parent::__construct("../data/BowlSet.csv", 'setID');
     }
-} 
+}
