@@ -1,21 +1,21 @@
 ItemID, Name, Category, ImageLocation, Calories, Salt, Price
-P1, Salmon, Protein, 100, 100, 1.00
-P2, Beef, Protein, 125, 125, 2.00
-P3, Chicken, Protein, 90, 75, 3.00
-P4, Egg, Protein, 75, 50, 4.00
-T1, Seaweed, Topping, 50, 100, 1.00
-T2, Tobiko, Topping, 50, 125, 2.00
-T3, Corn Flakes, Topping, 50, 25, 3.00
-T4, Sesame Seed, Topping, 50, 50, 4.00
-G1, White Rice, Grain, 100, 5, 1.00
-G2, Brown Rice, Grain, 75, 10, 2.00
-G3, Green Salad, Grain, 50, 15, 3.00
-G4, Noodle, Grain, 150, 20, 4.50
-V1, Carrots, Veggie, 100, 100, 1.00
-V2, Cucumber, Veggie, 125, 125, 2.00
-V3, Tomato, Veggie, 90, 75, 3.00
-V4, Lettuce, Veggie, 75, 50, 4.00
-S1, Chilli, Sauce, 100, 100, 1.00
-S2, Ketchup, Sauce, 125, 125, 2.00
-S3, Soy, Sauce, 90, 75, 3.00
-S4, BBQ, Sauce, 75, 50, 4.00
+P1, Salmon, Protein, /assets/images/P1_Salmon, 100, 100, 1.00
+P2, Beef, Protein, /assets/images/P2_Beef, 125, 125, 2.00
+P3, Chicken, Protein, /assets/images/P3_Chicken, 90, 75, 3.00
+P4, Egg, Protein, /assets/images/P4_Egg, 75, 50, 4.00
+T1, Seaweed, Topping, /assets/images/T1_Seaweed, 50, 100, 1.00
+T2, Tobiko, Topping, /assets/images/T2_Tobiko, 50, 125, 2.00
+T3, Corn Flakes, Topping, /assets/images/T3_CornFlakes, 50, 25, 3.00
+T4, Sesame, Topping, /assets/images/T4_Sesame, 50, 50, 4.00
+G1, White Rice, Grain, /assets/images/G1_WhiteRice, 100, 5, 1.00
+G2, Brown Rice, Grain, /assets/images/G2_BrownRice, 75, 10, 2.00
+G3, Green Salad, Grain,/assets/images/G3_GreenSalad, 50, 15, 3.00
+G4, Noodle, Grain, /assets/images/G4_Noodle, 150, 20, 4.50
+V1, Carrots, Veggie,/assets/images/V1_Carrots, 100, 100, 1.00
+V2, Cucumber, Veggie, /assets/images/V2_Cucumber, 125, 125, 2.00
+V3, Tomato, Veggie, /assets/images/V3_Tomato, 90, 75, 3.00
+V4, Lettuce, Veggie, /assets/images/V4_Lettuce, 75, 50, 4.00
+S1, Chilli, Sauce, /assets/images/S1_Chilli, 100, 100, 1.00
+S2, Ketchup, Sauce, /assets/images/S2_Ketchup, 125, 125, 2.00
+S3, Soy, Sauce, /assets/images/S3_Soy, 90, 75, 3.00
+S4, BBQ, Sauce, /assets/images/S4_BBQ, 75, 50, 4.00
