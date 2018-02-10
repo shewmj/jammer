@@ -20,5 +20,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Forked project from GitHub https://github.com/jedi-academy/CodeIgniter3.1-starter4
 
 ### Modified
+- Update Readme file with new project information
 
 ### Deleted
