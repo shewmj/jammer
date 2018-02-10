@@ -1,0 +1,21 @@
+ItemID, Name, Category, ImageLocation, Calories, Salt, Price
+P1, Salmon, 100, 100, 1.00
+P2, Beef, 125, 125, 2.00
+P3, Chicken, 90, 75, 3.00
+P4, Egg, 75, 50, 4.00
+T1, Seaweed, 50, 100, 1.00
+T2, Tobiko, 50, 125, 2.00
+T3, Corn Flakes, 50, 25, 3.00
+T4, Sesame Seed, 50, 50, 4.00
+B1, White Rice, 100, 5, 1.00
+B2, Brown Rice, 75, 10, 2.00
+B3, Green Salad, 50, 15, 3.00
+B4, Noodle, 150, 20, 4.50
+V1, Carrots, 100, 100, 1.00
+V2, Cucumber, 125, 125, 2.00
+V3, Tomato, 90, 75, 3.00
+V4, Lettuce, 75, 50, 4.00
+S1, Chilli, 100, 100, 1.00
+S2, Ketchup, 125, 125, 2.00
+S3, Soy, 90, 75, 3.00
+S4, BBQ, 75, 50, 4.00
