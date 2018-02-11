@@ -9,11 +9,22 @@
             <ul class="dropdown-menu">
                 {set}
                 <li>
-                    <a href="set/{id}"> {name}</a>
+                    <a href="/Welcome/set{id}"> {name}</a>
                 </li>
                 {/set}
             </ul>
         </div>
+    </div>
+
+    <br><br>
+    <div>
+        <h4>Calories: {calorieCount}</h4>
+    </div>
+     <div>
+        <h4>Salt: {saltCount}</h4>
+    </div>
+     <div>
+        <h4>Price: {priceCount}</h4>
     </div>
 
     <div class="col-lg-9 picture">
@@ -30,7 +41,7 @@
             <img style="width:10%" src="{grain}.png"/>
         </div>
         <div style="text-align:center">
-            <img style="width:10%" src="assets/images/emptyBowl.png"/>
+            <img style="width:10%" src="/assets/images/emptyBowl.png"/>
         </div>
     </div>
     </div>
