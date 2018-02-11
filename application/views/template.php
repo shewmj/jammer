@@ -37,7 +37,7 @@
 		        </div><!-- /.navbar-collapse -->
 		    </div><!-- /.container-fluid -->
 		</nav>
-        <div id="container">
+        <div>
 			{content}
 
         </div>

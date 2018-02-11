@@ -23,6 +23,7 @@ class Welcome extends Application
 		$this->data['set'] = $set;
 
 		$setfirst = $this->Set->get(1);
+		$this->data['name'] = $setfirst->name;
 
 		$this->data['protein'] = $this->Accessories->get($setfirst->protein)->imagelocation;
 		$this->data['topping'] = $this->Accessories->get($setfirst->topping)->imagelocation;
@@ -31,19 +32,19 @@ class Welcome extends Application
 		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
 
 
-		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories 
+		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories
 			+ $this->Accessories->get($setfirst->topping)->calories
 			+ $this->Accessories->get($setfirst->grain)->calories
 			+ $this->Accessories->get($setfirst->veggie)->calories
 			+ $this->Accessories->get($setfirst->sauce)->calories;
 
-		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt 
+		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt
 			+ $this->Accessories->get($setfirst->topping)->salt
 			+ $this->Accessories->get($setfirst->grain)->salt
 			+ $this->Accessories->get($setfirst->veggie)->salt
 			+ $this->Accessories->get($setfirst->sauce)->salt;
 
-		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price 
+		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price
 			+ $this->Accessories->get($setfirst->topping)->price
 			+ $this->Accessories->get($setfirst->grain)->price
 			+ $this->Accessories->get($setfirst->veggie)->price
@@ -68,19 +69,19 @@ class Welcome extends Application
 		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
 
 
-		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories 
+		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories
 			+ $this->Accessories->get($setfirst->topping)->calories
 			+ $this->Accessories->get($setfirst->grain)->calories
 			+ $this->Accessories->get($setfirst->veggie)->calories
 			+ $this->Accessories->get($setfirst->sauce)->calories;
 
-		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt 
+		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt
 			+ $this->Accessories->get($setfirst->topping)->salt
 			+ $this->Accessories->get($setfirst->grain)->salt
 			+ $this->Accessories->get($setfirst->veggie)->salt
 			+ $this->Accessories->get($setfirst->sauce)->salt;
 
-		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price 
+		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price
 			+ $this->Accessories->get($setfirst->topping)->price
 			+ $this->Accessories->get($setfirst->grain)->price
 			+ $this->Accessories->get($setfirst->veggie)->price
@@ -105,19 +106,19 @@ class Welcome extends Application
 		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
 
 
-		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories 
+		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories
 			+ $this->Accessories->get($setfirst->topping)->calories
 			+ $this->Accessories->get($setfirst->grain)->calories
 			+ $this->Accessories->get($setfirst->veggie)->calories
 			+ $this->Accessories->get($setfirst->sauce)->calories;
 
-		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt 
+		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt
 			+ $this->Accessories->get($setfirst->topping)->salt
 			+ $this->Accessories->get($setfirst->grain)->salt
 			+ $this->Accessories->get($setfirst->veggie)->salt
 			+ $this->Accessories->get($setfirst->sauce)->salt;
 
-		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price 
+		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price
 			+ $this->Accessories->get($setfirst->topping)->price
 			+ $this->Accessories->get($setfirst->grain)->price
 			+ $this->Accessories->get($setfirst->veggie)->price
@@ -142,19 +143,19 @@ class Welcome extends Application
 		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
 
 
-		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories 
+		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories
 			+ $this->Accessories->get($setfirst->topping)->calories
 			+ $this->Accessories->get($setfirst->grain)->calories
 			+ $this->Accessories->get($setfirst->veggie)->calories
 			+ $this->Accessories->get($setfirst->sauce)->calories;
 
-		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt 
+		$this->data['saltCount'] = $this->Accessories->get($setfirst->protein)->salt
 			+ $this->Accessories->get($setfirst->topping)->salt
 			+ $this->Accessories->get($setfirst->grain)->salt
 			+ $this->Accessories->get($setfirst->veggie)->salt
 			+ $this->Accessories->get($setfirst->sauce)->salt;
 
-		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price 
+		$this->data['priceCount'] = $this->Accessories->get($setfirst->protein)->price
 			+ $this->Accessories->get($setfirst->topping)->price
 			+ $this->Accessories->get($setfirst->grain)->price
 			+ $this->Accessories->get($setfirst->veggie)->price
@@ -185,6 +186,6 @@ class Welcome extends Application
 
 
 
-	
+
 
 }

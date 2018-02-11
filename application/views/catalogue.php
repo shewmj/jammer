@@ -1,20 +1,27 @@
-<table>
-    <tbody>
-        <div id="all-items" class="items">
-            {accessories}
-            <tr class="item_row">
-                <td><h4>{name}</h4></td>
-                <td><p>&nbsp;Calories: {calories}</p></td>
-                <td><p>&nbsp;&nbsp;Salt: {salt}</p></td>
-                <td><p>&nbsp;&nbsp;Price: {price}</p></td>
-                <td><img style="width:25%; margin-left:10px" src="{imagelocation}.png"/></td>
-
-            </tr>
-            {/accessories}
+<div style="text-align:center">
+    <h2 style="text-align:center">Catalogue of Ingredients</h2>
+    <div class ="col-lg-12">
+        {accessories}
+        <div class="col-lg-2" style="margin-left:-50px">
+        </div>
+        <div class ="col-lg-2" >
+            <h3>{name}</h3>
+        </div>
+        <div class ="col-lg-2" style="margin-top:15px">
+            <h4>Calories: {calories}</h4>
+        </div>
+        <div class ="col-lg-2" style="margin-top:15px">
+            <h4>Salt: {salt}</h4>
+        </div>
+        <div class ="col-lg-2" style="margin-top:15px">
+            <h4>Price: {price}</h4>
+        </div>
+        <div class ="col-lg-1">
+            <img class="picture" style="width:100%;" src="{imagelocation}.png"/>
         </div>
 
+
+
+        {/accessories}
     </div>
-</tbody>
-</table>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+</div>
