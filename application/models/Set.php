@@ -2,7 +2,7 @@
 class Set extends CSV_Model
 {
 
-    public $setID;
+    public $id;
     public $name;
     public $Protein;
     public $Topping;
@@ -12,6 +12,6 @@ class Set extends CSV_Model
 
     public function __construct()
     {
-        parent::__construct("../data/BowlSet.csv", 'setID');
+        parent::__construct("../data/BowlSet.csv", 'id');
     }
 }

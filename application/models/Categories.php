@@ -2,16 +2,11 @@
 class Categories extends CSV_Model
 {
 
-	public $setID;
+	public $id;
 	public $name;
-	public $Protein;
-	public $Topping;
-	public $Grain;
-	public $Veggie;
-	public $Sauce;
 
 	public function __construct()
 	{
-		parent::__construct("../data/BowlSet.csv", 'setID');
+		parent::__construct("../data/Categories.csv", 'id');
 	}
 }
