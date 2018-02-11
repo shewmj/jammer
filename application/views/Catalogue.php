@@ -7,11 +7,12 @@
                 <td><p>&nbsp;Calories: {calories}</p></td>
                 <td><p>&nbsp;&nbsp;Salt: {salt}</p></td>
                 <td><p>&nbsp;&nbsp;Price: {price}</p></td>
-                <td><img class="draggable drag-drop" style="width:25%; margin-left:10px" src="{imagelocation}.png"/></td>
+                <td><img style="width:25%; margin-left:10px" src="{imagelocation}.png"/></td>
 
             </tr>
+            {/accessories}
         </div>
-        {/accessories}
+
     </div>
 </tbody>
 </table>

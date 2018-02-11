@@ -19,8 +19,22 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
+		$set = $this->Set->all();
+		$this->data['set'] = $set;
+
+		$setfirst = $this->Set->get(1);
+
+		$this->data['protein'] = $this->Accessories->get($setfirst->protein)->imagelocation;
+		$this->data['topping'] = $this->Accessories->get($setfirst->topping)->imagelocation;
+		$this->data['grain'] = $this->Accessories->get($setfirst->grain)->imagelocation;
+		$this->data['veggie'] = $this->Accessories->get($setfirst->veggie)->imagelocation;
+		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
+
+
 		$this->data['pagebody'] = 'welcome_message';
 		$this->render();
 	}
+
+	
 
 }
