@@ -1,6 +1,6 @@
-catid,catname
+id,name
 P,Protein
 T,Topping
 G,Grain
-V, Veggie
-S, Sauce
+V,Veggie
+S,Sauce
