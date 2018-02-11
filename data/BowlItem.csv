@@ -11,7 +11,7 @@ id,name,category,imagelocation,calories,salt,price
 10,BrownRice,Grain,/assets/images/G2_BrownRice,75,10,2.00
 11,GreenSalad,Grain,/assets/images/G3_GreenSalad,50,15,3.00
 12,Noodle,Grain,/assets/images/G4_Noodle,150,20,4.50
-13,Carrots,Veggie,/assets/images/V1_Carrots,100,100,1.00
+13,Carrots,Veggie,/assets/images/V1_Carrot,100,100,1.00
 14,Cucumber,Veggie,/assets/images/V2_Cucumber,125,125,2.00
 15,Tomato,Veggie,/assets/images/V3_Tomato,90,75,3.00
 16,Lettuce,Veggie,/assets/images/V4_Lettuce,75,50,4.00
