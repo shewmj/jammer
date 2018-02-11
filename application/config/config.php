@@ -517,6 +517,5 @@ $config['menu_choices'] = array(
     'menudata' => array(
         array('name' => 'Home', 'link' => '/'),
         array('name' => 'Catalogue', 'link' => '/catalogue'),
-        array('name' => 'Info', 'link' => '/info'),
         )
     );
