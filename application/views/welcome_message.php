@@ -3,18 +3,35 @@
     <div class="col-lg-3">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                Dropdown Example
+                Presets
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#">Chicken Teriyaki with Rice</a></li>
-                <li><a href="#">Chicken Strips with Fries</a></li>
-                <li><a href="#">Salmon Sashimi with cucumbers   </a></li>
+                {set}
+                <li>
+                    <a href="set/{id}"> {name}</a>
+                </li>
+                {/set}
             </ul>
         </div>
     </div>
 
     <div class="col-lg-9 picture">
-        Picture
+        <div style="text-align:center">
+            <img style="width:10%" src="{topping}.png"/>
+        </div>
+        <div style="text-align:center">
+            <img style="width:10%" src="{sauce}.png"/>
+        </div>
+        <div style="text-align:center">
+            <img style="width:10%" src="{veggie}.png"/>
+            <img style="width:10%" src="{protein}.png"/>
+        <div style="text-align:center">
+            <img style="width:10%" src="{grain}.png"/>
+        </div>
+        <div style="text-align:center">
+            <img style="width:10%" src="assets/images/emptyBowl.png"/>
+        </div>
+    </div>
     </div>
 </div>
