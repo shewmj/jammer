@@ -1,6 +1,6 @@
 id,name
-P,Protein
-T,Topping
-G,Grain
-V,Veggie
-S,Sauce
+1,Protein
+2,Topping
+3,Grain
+4,Veggie
+5,Sauce
