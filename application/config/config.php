@@ -511,3 +511,12 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+//Choices availble for selection in the menubar
+$config['menu_choices'] = array(
+    'menudata' => array(
+        array('name' => 'Home', 'link' => '/'),
+        array('name' => 'Catalogue', 'link' => '/catalogue'),
+        array('name' => 'Info', 'link' => '/info'),
+        )
+    );
