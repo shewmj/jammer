@@ -15,9 +15,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## 0.0.2 - 2018-02-10
 ### Added
+- Added & linked Navigation menu
+- Added required views: Catalogue.php
 - Added required models: Accessories.php, Categories.php and Set.php.
 
 ### Modified
+- Alter .csv column name and mock data to work with Code Igniter
+- Link Catalogue with csv files.
+- Modify CI core file for MY_Model error.
+- Modify welcome page to simple homepage
 
 ### Deleted
 
