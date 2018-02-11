@@ -3,11 +3,12 @@
         <div id="all-items" class="items">
             {accessories}
             <tr class="item_row">
-                <td><img class="draggable drag-drop" src="{imagelocation}.png"/></td>
                 <td><h4>{name}</h4></td>
                 <td><p>&nbsp;Calories: {calories}</p></td>
                 <td><p>&nbsp;&nbsp;Salt: {salt}</p></td>
                 <td><p>&nbsp;&nbsp;Price: {price}</p></td>
+                <td><img class="draggable drag-drop" style="width:25%; margin-left:10px" src="{imagelocation}.png"/></td>
+
             </tr>
         </div>
         {/accessories}
