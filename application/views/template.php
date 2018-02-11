@@ -41,7 +41,11 @@
 			{content}
 
         </div>
-		<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds.
+
+		<p class="footer">
+ 			<strong>This is an academic project, and not related to, or endorsed by, any similar business from the real world.</strong>
+			<br>
+			Page rendered in <strong>{elapsed_time}</strong> seconds.
 			{ci_version}</p>
 	</body>
 </html>
