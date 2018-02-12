@@ -1,3 +1,4 @@
+<div style="containerColor">
 <div style="text-align:center">
     <h2 style="text-align:center">Catalogue of Ingredients</h2>
     <div class ="col-lg-12">
@@ -24,4 +25,5 @@
 
         {/accessories}
     </div>
+</div>
 </div>
