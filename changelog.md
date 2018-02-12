@@ -13,11 +13,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## 0.0.3 - 2018-02-10
+## 0.0.4 - 2018-02-11
 ### Added
-- Added Info Controller to generate JSON information.
+- Additional .css styling files
+- Background Image for site
 
 ### Modified
+- Fix display issues with homepage and catalogue views
+
+### Deleted
+
+## 0.0.3 - 2018-02-10
+### Added
+- Linked Bootstrap support files
+- Added Catalogue & homepage controller
+- Added Info Controller to generate JSON information
+
+### Modified
+- Update info controller to show correct Json data
+- Update homepage controller to properly populate homepage set data
 - Link food images associated with food sets to homepage
 
 ### Deleted
@@ -28,13 +42,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Linked Homepage
 - Added & linked Navigation menu
 - Added required views: Catalogue.php
-- Added required models: Accessories.php, Categories.php and Set.php.
+- Added required models: Accessories.php, Categories.php and Set.php
 
 ### Modified
 - Updated footer to show site is academic project
 - Alter .csv column name and mock data to work with Code Igniter
-- Link Catalogue with csv files.
-- Modify CI core file for MY_Model error.
+- Link Catalogue with csv files
+- Modify CI core file for MY_Model error
 - Modify welcome page to simple homepage
 
 ### Deleted
