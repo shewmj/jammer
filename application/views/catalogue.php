@@ -1,4 +1,3 @@
-
 <div style="text-align:center">
     <h2 style="text-align:center">Catalogue of Ingredients</h2>
     <div class ="col-lg-12">
@@ -21,8 +20,7 @@
             <img class="picture" style="width:100%;" src="{imagelocation}.png"/>
         </div>
 
-
-
         {/accessories}
+
     </div>
 </div>

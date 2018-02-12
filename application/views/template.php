@@ -40,8 +40,9 @@
 		    </div><!-- /.container-fluid -->
 		</nav>
         <div id="content-background">
-			{content}
 
+
+			{content}
 
 
 		<p class="footer">
@@ -49,7 +50,7 @@
 			<br>
 			Page rendered in <strong>{elapsed_time}</strong> seconds.
 			{ci_version}</p>
-
 			</div>
+
 	</body>
 </html>
