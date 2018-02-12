@@ -11,6 +11,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Released]
+## 1.0.0 - 2018-02-11
+Completed rudimentary layout of Assignment 01 website.
+
 ## [Unreleased]
 
 ## 0.0.4 - 2018-02-11
@@ -19,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Background Image for site
 
 ### Modified
+- Update catalogue view display
 - Fix display issues with homepage and catalogue views
 
 ### Deleted
