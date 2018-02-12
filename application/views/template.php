@@ -28,6 +28,7 @@
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
+								<!-- Nav Bar Title -->
 		            <a class="navbar-brand" href="#">Jammer's Eatery</a>
 		        </div>
 
@@ -39,6 +40,7 @@
 		</nav><!-- /.navbar -->
         <div id="content-background">
 			{content}
+
 		<p class="footer">
  			<strong>This is an academic project, and not related to, or endorsed by, any similar business from the real world.</strong>
 			<br>
@@ -46,6 +48,5 @@
 			{ci_version}
 		</p> <!-- /.footer -->
 		</div> <!-- /#content-backgroun -->
-
 	</body>
 </html>
