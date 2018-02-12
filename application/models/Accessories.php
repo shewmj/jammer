@@ -2,9 +2,9 @@
 class Accessories extends CSV_Model
 {
 
-    public $id;
+    public $id; // PK
     public $name;
-    public $category;
+    public $category; // FK
     public $imageLocation;
     public $calories;
     public $salt;

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,18 +37,16 @@
 	                {menubar}
 		        </div><!-- /.navbar-collapse -->
 		    </div><!-- /.container-fluid -->
-		</nav>
-				<!-- Insert Site contents here -->
+		</nav><!-- /.navbar -->
         <div id="content-background">
-					{content}
+			{content}
 
 		<p class="footer">
  			<strong>This is an academic project, and not related to, or endorsed by, any similar business from the real world.</strong>
 			<br>
 			Page rendered in <strong>{elapsed_time}</strong> seconds.
-			{ci_version}</p>
-
-				</div>
-
+			{ci_version}
+		</p> <!-- /.footer -->
+		</div> <!-- /#content-backgroun -->
 	</body>
 </html>
