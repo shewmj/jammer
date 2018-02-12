@@ -1,6 +1,7 @@
 <h1 class="text-center">Welcome to Jammer's Eatery</h1>
 <br>
 <div class="col-lg-12">
+    <!-- Presets -->
     <div class="col-lg-2" style="text-align:center">
         <div class="dropdown">
           <h2>
@@ -20,7 +21,7 @@
         </div>
     </div>
 
-
+    <!-- Picture -->
     <div class="col-lg-6 picture" style="text-align:center">
       <h2>
         Meal Contents
@@ -49,6 +50,7 @@
         </div>
     </div>
 
+    <!-- Bowl Information -->
     <div class="col-lg-4" style="text-align:center">
         <h2>
             {name}
