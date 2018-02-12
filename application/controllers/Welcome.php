@@ -19,19 +19,22 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
+		//inject set info to view
 		$set = $this->Set->all();
 		$this->data['set'] = $set;
 
+		//inject first set name to view
 		$setfirst = $this->Set->get(1);
 		$this->data['name'] = $setfirst->name;
 
+		//inject images of first set 
 		$this->data['protein'] = $this->Accessories->get($setfirst->protein)->imagelocation;
 		$this->data['topping'] = $this->Accessories->get($setfirst->topping)->imagelocation;
 		$this->data['grain'] = $this->Accessories->get($setfirst->grain)->imagelocation;
 		$this->data['veggie'] = $this->Accessories->get($setfirst->veggie)->imagelocation;
 		$this->data['sauce'] = $this->Accessories->get($setfirst->sauce)->imagelocation;
 
-
+		//calculate and inject calorie, salt, price values to view
 		$this->data['calorieCount'] = $this->Accessories->get($setfirst->protein)->calories
 			+ $this->Accessories->get($setfirst->topping)->calories
 			+ $this->Accessories->get($setfirst->grain)->calories
@@ -50,26 +53,35 @@ class Welcome extends Application
 			+ $this->Accessories->get($setfirst->veggie)->price
 			+ $this->Accessories->get($setfirst->sauce)->price;
 
-
+		//render page
 		$this->data['pagebody'] = 'welcome_message';
 		$this->render();
 	}
 
+	/**
+	 * Displays the set with index $item
+	 *
+	 * 
+	 * $item - The index of the set to be displayed
+	 */
 	public function set($item)
 	{
+		//inject set info to view
 		$set = $this->Set->all();
 		$this->data['set'] = $set;
 
+		//inject selected set name to view
 		$setSelected = $this->Set->get($item);
 		$this->data['name'] = $setSelected->name;
 
+		//inject images of selected set 
 		$this->data['protein'] = $this->Accessories->get($setSelected->protein)->imagelocation;
 		$this->data['topping'] = $this->Accessories->get($setSelected->topping)->imagelocation;
 		$this->data['grain'] = $this->Accessories->get($setSelected->grain)->imagelocation;
 		$this->data['veggie'] = $this->Accessories->get($setSelected->veggie)->imagelocation;
 		$this->data['sauce'] = $this->Accessories->get($setSelected->sauce)->imagelocation;
 
-
+		//calculate and inject calorie, salt, price values to view
 		$this->data['calorieCount'] = $this->Accessories->get($setSelected->protein)->calories
 			+ $this->Accessories->get($setSelected->topping)->calories
 			+ $this->Accessories->get($setSelected->grain)->calories
@@ -88,7 +100,7 @@ class Welcome extends Application
 			+ $this->Accessories->get($setSelected->veggie)->price
 			+ $this->Accessories->get($setSelected->sauce)->price;
 
-
+		//render page
 		$this->data['pagebody'] = 'welcome_message';
 		$this->render();
 	}
