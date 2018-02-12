@@ -3,7 +3,7 @@
 <!-- Homepage Contents Area -->
 <div class="col-lg-12">
 
-    <!-- Set bowl meal dropdown menu -->
+    <!-- Presets for a Bowl Set Meal -->
     <div class="col-lg-2" style="text-align:center">
         <div class="dropdown">
           <h2>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <!-- Area to display an image of set bowl meal -->
+    <!-- Display image of Bowl Set -->
     <div class="col-lg-6 picture" style="text-align:center">
       <h2>
         Meal Contents
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <!-- Area to display information about a set bowl meal -->
+    <!-- Display Bowl Set information -->
     <div class="col-lg-4" style="text-align:center">
         <h2>
             {name}

@@ -1,26 +1,23 @@
-<div style="text-align:center">
-    <h2 style="text-align:center">Catalogue of Ingredients</h2>
-    <div class ="col-lg-12">
+<div style="text-align:center;">
+    <h2>Catalogue of Ingredients</h2>
+    <table style="margin-left:20%;">
         {accessories}
-        <div class="col-lg-2" style="margin-left:-50px">
-        </div>
-        <div class ="col-lg-2" >
+        <tr>
+        <td>
             <h3>{name}</h3>
-        </div>
-        <div class ="col-lg-2" style="margin-top:15px">
-            <h4>Calories: {calories}</h4>
-        </div>
-        <div class ="col-lg-2" style="margin-top:15px">
-            <h4>Salt: {salt}</h4>
-        </div>
-        <div class ="col-lg-2" style="margin-top:15px">
-            <h4>Price: {price}</h4>
-        </div>
-        <div class ="col-lg-1">
-            <img class="picture" style="width:100%;" src="{imagelocation}.png"/>
-        </div>
-
+        </td>
+        <td>
+            <h4>&nbsp&nbsp Calories: {calories}</h4>
+        </td>
+        <td>
+            <h4>&nbsp Salt: {salt}</h4>
+        </td>
+        <td>
+            <h4>&nbsp&nbsp Price: {price}</h4>
+        </td>
+        <td>
+            <img class="picture" style="width:40%;" src="{imagelocation}.png"/>
+        </td>
         {/accessories}
-
-    </div>
+    </table>
 </div>
