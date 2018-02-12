@@ -1,6 +1,9 @@
 <h1 class="text-center">Welcome to Jammer's Eatery</h1>
 <br>
+<!-- Homepage Contents Area -->
 <div class="col-lg-12">
+
+    <!-- Set bowl meal dropdown menu -->
     <div class="col-lg-2" style="text-align:center">
         <div class="dropdown">
           <h2>
@@ -20,7 +23,7 @@
         </div>
     </div>
 
-
+    <!-- Area to display an image of set bowl meal -->
     <div class="col-lg-6 picture" style="text-align:center">
       <h2>
         Meal Contents
@@ -49,6 +52,7 @@
         </div>
     </div>
 
+    <!-- Area to display information about a set bowl meal -->
     <div class="col-lg-4" style="text-align:center">
         <h2>
             {name}
