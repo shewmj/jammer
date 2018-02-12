@@ -30,7 +30,7 @@
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
-		            <a class="navbar-brand" href="#">Food</a>
+		            <a class="navbar-brand" href="#">Jammer's Eatery</a>
 		        </div>
 
 		        <!-- Collect the nav links, forms, and other content for toggling -->

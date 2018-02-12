@@ -1,7 +1,11 @@
-<h1 class="text-center">Jammer's Eatery</h1>
+<h1 class="text-center">Welcome to Jammer's Eatery</h1>
+<br>
 <div class="col-lg-12">
-    <div class="col-lg-2">
+    <div class="col-lg-2" style="text-align:center">
         <div class="dropdown">
+          <h2>
+          Pick a Meal
+          </h2>
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                 Presets
                 <span class="caret"></span>
@@ -17,7 +21,11 @@
     </div>
 
 
-    <div class="col-lg-6 picture">
+    <div class="col-lg-6 picture" style="text-align:center">
+      <h2>
+        Meal Contents
+      </h2>
+      <br>
         <div style="text-align:center">
             Topping
             <img style="width:10%; border-style:dotted; border-width:3px; margin-right:55px; margin-bottom:5px;" src="{topping}.png"/>
