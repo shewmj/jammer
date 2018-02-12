@@ -16,6 +16,8 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<link href="/assets/css/custom.css" rel="stylesheet"/>
+
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -37,15 +39,18 @@
 		        </div><!-- /.navbar-collapse -->
 		    </div><!-- /.container-fluid -->
 		</nav>
-        <div>
+        <div id="content-background">
+
+
 			{content}
 
-        </div>
 
 		<p class="footer">
  			<strong>This is an academic project, and not related to, or endorsed by, any similar business from the real world.</strong>
 			<br>
 			Page rendered in <strong>{elapsed_time}</strong> seconds.
 			{ci_version}</p>
+			</div>
+
 	</body>
 </html>

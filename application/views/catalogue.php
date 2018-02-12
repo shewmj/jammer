@@ -20,8 +20,7 @@
             <img class="picture" style="width:100%;" src="{imagelocation}.png"/>
         </div>
 
-
-
         {/accessories}
+
     </div>
 </div>

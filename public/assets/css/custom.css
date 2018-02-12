@@ -1,0 +1,17 @@
+
+/* Add background image */
+body {
+   background-image: url(/assets/images/background.png);
+   background-repeat: repeat;
+   background-attachment: fixed;
+   background-size: contain;
+}
+
+#content-background {
+  background-color: #92a8d1;;
+  background-size: contain;
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 20px;
+}
