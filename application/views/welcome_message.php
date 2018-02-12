@@ -9,7 +9,7 @@
             <ul class="dropdown-menu">
                 {set}
                 <li>
-                    <a href="/Welcome/set{id}"> {name}</a>
+                    <a href="/Welcome/set/{id}"> {name}</a>
                 </li>
                 {/set}
             </ul>
