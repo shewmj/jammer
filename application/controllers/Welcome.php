@@ -55,12 +55,12 @@ class Welcome extends Application
 		$this->render();
 	}
 
-	public function set1()
+	public function set($item)
 	{
 		$set = $this->Set->all();
 		$this->data['set'] = $set;
 
-		$setfirst = $this->Set->get(1);
+		$setfirst = $this->Set->get($item);
 
 		$this->data['protein'] = $this->Accessories->get($setfirst->protein)->imagelocation;
 		$this->data['topping'] = $this->Accessories->get($setfirst->topping)->imagelocation;
@@ -183,9 +183,5 @@ class Welcome extends Application
 		$this->data['pagebody'] = 'welcome_message';
 		$this->render();
 	}
-
-
-
-
 
 }
