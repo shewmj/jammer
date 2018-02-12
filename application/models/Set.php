@@ -2,8 +2,9 @@
 class Set extends CSV_Model
 {
 
-    public $id;
+    public $id; // PK
     public $name;
+    // FKs
     public $Protein;
     public $Topping;
     public $Grain;

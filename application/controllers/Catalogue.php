@@ -2,13 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Catalogue extends Application
 {
-	/**
-	 * Index page.
-	 */
+	
 	function __construct()
 	{
 		parent::__construct();
 	}
+
+	/**
+	 * Grabs all of the accessories informations and passes it
+	 * to the catelogue view
+	 */
 	public function index()
 	{
 		//get all accessories
