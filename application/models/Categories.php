@@ -2,7 +2,7 @@
 class Categories extends CSV_Model
 {
 
-	public $id; // PK
+	public $id;
 	public $name;
 
 	public function __construct()
