@@ -20,6 +20,10 @@
                 </li>
                 {/set}
             </ul>
+            <div>
+                {add}
+                {edit}
+            </div>
         </div>
     </div>
 
