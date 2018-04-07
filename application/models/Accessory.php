@@ -1,13 +1,13 @@
 <?php
 class Accessory extends Entity
 {
-  public $id; // PK
-  public $name;
-  public $category; // FK
-  public $imageLocation;
-  public $calories;
-  public $salt;
-  public $price;
+  protected $id; // PK
+  protected $name;
+  protected $category; // FK
+  protected $imageLocation;
+  protected $calories;
+  protected $salt;
+  protected $price;
 
   // insist that an ID be present
   public function setId($value) {
@@ -63,7 +63,7 @@ class Accessory extends Entity
     throw new Exception('Price must be numeric');
     if ($value > 0.50)
     throw new Exception('Price of a food item must be greater than $ 0.50');
-    $this->weight = $value;
+    $this->price = $value;
     return $this;
   }
 }
