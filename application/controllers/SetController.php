@@ -1,28 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
+/**
+Controller to add new sets and edit existings sets of bowl items in the 'database'
+**/
 class SetController extends Application
 {
 
-
+	/*
+	Sets up the view to add a new set	
+	*/
 	public function Add()
 	{
+
+		//guests cannot add new sets
 		$role = $this->session->userdata('userrole');
-		if ($role == ROLE_GUEST)
-		{
+		if ($role == ROLE_GUEST) {
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 			return;
 		}
-
-
-
-
-		// $this->data['protein'] = $this->Accessories->get($setSelected->protein)->imagelocation;
-		// $this->data['topping'] = $this->Accessories->get($setSelected->topping)->imagelocation;
-		// $this->data['grain'] = $this->Accessories->get($setSelected->grain)->imagelocation;
-		// $this->data['veggie'] = $this->Accessories->get($setSelected->veggie)->imagelocation;
-		// $this->data['sauce'] = $this->Accessories->get($setSelected->sauce)->imagelocation;
 
 		$proteins = array();
 		$grains = array();
@@ -32,6 +28,7 @@ class SetController extends Application
 
 		$items = $this->Accessories->all();
 
+		//sort accessories into categories
 		for ($x = 1; $x <= sizeof($items); $x++) {
 			$temp = $this->Accessories->get($x);
 
@@ -54,6 +51,7 @@ class SetController extends Application
 			}
 		}
 
+		//pass accessories sorted by categories into view
 		$this->data['proteins'] = $proteins;
 		$this->data['grains'] = $grains;
 		$this->data['toppings'] = $toppings;
@@ -61,7 +59,6 @@ class SetController extends Application
 		$this->data['sauces'] = $sauces;
 
 		$this->data['setNum'] = sizeof($items = $this->Set->all()) + 1;
-
 		$this->data['pagetitle'] = 'Create';
 		$this->data['pagebody'] = 'setAdd';
 		
@@ -69,17 +66,22 @@ class SetController extends Application
 	}
 
 
+	/*
+	Sets up the view to edit a existing set	
+
+	$setID - the id of the set being edited
+	*/
 	public function Edit($setID)
 	{
+		//guests cannot edit  sets
 		$role = $this->session->userdata('userrole');
-		if ($role == ROLE_GUEST)
-		{
+		if ($role == ROLE_GUEST) {
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 			return;
 		}
 
 		$selectedSet = $this->Set->get($setID);
-
+		var_dump($selectedSet);
 
 		$proteins = array();
 		$grains = array();
@@ -89,20 +91,20 @@ class SetController extends Application
 
 		$items = $this->Accessories->all();
 
+		//sort accessories into categories 
 		for ($x = 1; $x <= sizeof($items); $x++) {
 			$temp = $this->Accessories->get($x);
 
-			if ($this->Accessories->get($selectedSet->protein)->id == $temp->id 
-				|| $this->Accessories->get($selectedSet->grain)->id == $temp->id 
-				|| $this->Accessories->get($selectedSet->topping)->id == $temp->id 
-				|| $this->Accessories->get($selectedSet->veggie)->id == $temp->id 
-				|| $this->Accessories->get($selectedSet->sauce)->id == $temp->id ) {
-				$currItem = array('item' => '<option selected="selected" value="' . $temp->id . '">' . $temp->name . '</option>');
+			if ($selectedSet->protein == $temp->id 
+				|| $selectedSet->grain == $temp->id 
+				|| $selectedSet->topping == $temp->id 
+				|| $selectedSet->veggie == $temp->id 
+				|| $selectedSet->sauce == $temp->id ) {
+				$currItem = array('item' => '<option selected value="' . $temp->id . '">' . $temp->name . '</option>');
 			} else {
 				$currItem = array('item' => '<option value="' . $temp->id . '">' . $temp->name . '</option>');
 			}
 
-			
 			if ($temp->category == "Protein") {
 				$proteins[] = $currItem;
 			}
@@ -120,6 +122,7 @@ class SetController extends Application
 			}
 		}
 
+		//pass accessories sorted by categories into view
 		$this->data['proteins'] = $proteins;
 		$this->data['grains'] = $grains;
 		$this->data['toppings'] = $toppings;
@@ -127,11 +130,8 @@ class SetController extends Application
 		$this->data['sauces'] = $sauces;
 
 		$this->data['setNum'] = $setID;
-
 		$this->data['setName'] = $selectedSet->name;
-
-
-		$this->data['pagetitle'] = 'Create';
+		$this->data['pagetitle'] = 'Edit';
 		$this->data['pagebody'] = 'setEdit';
 		
 		$this->render();
@@ -140,65 +140,47 @@ class SetController extends Application
 
 
 
-
-
-
-
+	/*
+	Retrieves data from the input form and validates to create a new set
+	*/
 	public function AddSet()
 	{
+		//guests cannot add new sets
 		$role = $this->session->userdata('userrole');
-		if ($role == ROLE_GUEST)
-		{
+		if ($role == ROLE_GUEST) {
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 			return;
 		}
 
-
-
 		$this->load->model('Set');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->Set->rules());
-		// $sets = (array) $this->Set->create();
-		//var_dump($sets);
+		
+		//retrieve data
 		$newSet = $this->input->post();
 		var_dump($newSet);
+		$newSet = (object) $newSet;  
 
-
-
-
-		$newSet = (object) $newSet;  // convert back to object
-		// validate away
-		if ($this->form_validation->run())
-		{	
+		//validate
+		if ($this->form_validation->run()) {	
 			$this->Set->add($newSet);	
-		} 
-		else
-		{
+		} else {
 			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
 		}
 
 		redirect('/Welcome/set/' .  $this->Set->highest());
-
-
-
 	}
 
 
-
-
-
-
-
-
-
-
-
-	public function EditSet($set)
+	/*
+	Retrieves data from the input form and validates to edit a existing set
+	*/
+	public function EditSet()
 	{
 
+		//guests cannot add new sets
 		$role = $this->session->userdata('userrole');
-		if ($role == ROLE_GUEST)
-		{
+		if ($role == ROLE_GUEST) {
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 			return;
 		}
@@ -207,39 +189,20 @@ class SetController extends Application
 		$this->load->model('Set');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->Set->rules());
-		// $sets = (array) $this->Set->create();
-		//var_dump($sets);
+	
+		//retrieve data
 		$existingSet = $this->input->post();
 		var_dump($existingSet);
 
-
-		$existingSet = (object) $existingSet;  // convert back to object
-		// validate away
-		if ($this->form_validation->run())
-		{	
+		$existingSet = (object) $existingSet;  
+		
+		//validate
+		if ($this->form_validation->run() {	
 			$this->Set->update($existingSet);	
-		} 
-		else
-		{
+		} else {
 			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
 		}
-
-		redirect('/Welcome/set/' . $set);
-
-
-	}
-
-
-
-	private function loadModelIntoArray($data)
-	{
-		$tmp = array();
-		foreach ($data as $d)
-		{
-			$item = array('item' => '<option value="' . $d->id . '">' . $d->Name . '</option>');
-			array_push($tmp, $item);
-		}
-		return $tmp;
+		redirect('/Welcome/set/' . $existingSet->id);
 	}
 
 }
