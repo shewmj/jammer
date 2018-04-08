@@ -1,5 +1,5 @@
 <?php
-class SetEnt extends Entity
+class Setent extends Entity
 {
 
     protected $id; // PK
