@@ -14,7 +14,6 @@
 						<label for="inputProtein">Set name</label>
 						<input type="text" name="setname" value="{setName}"><br>
 					</div>
-
 					<div class="form-group col-4 offset-4">
 						<label for="inputProtein">Protein</label>
 						<select name="protein" id="inputProtein" class="form-control">
@@ -24,19 +23,19 @@
 						</select>
 					</div>
 					<div class="form-group col-4 offset-4">
-						<label for="inputGrain">Grain</label>
-						<select name="grain" id="inputGrain" class="form-control">
-							{grains}
-								{item}
-							{/grains}
-						</select>
-					</div>
-					<div class="form-group col-4 offset-4">
 						<label for="inputTopping">Topping</label>
 						<select name="topping" id="inputTopping" class="form-control">
 							{toppings}
 								{item}
 							{/toppings}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputGrain">Grain</label>
+						<select name="grain" id="inputGrain" class="form-control">
+							{grains}
+								{item}
+							{/grains}
 						</select>
 					</div>
 					<div class="form-group col-4 offset-4">
