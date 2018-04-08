@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 1.0.2 - 2018-04-07
 ### Added
 - Added Create and Edit Set buttons that show up for Admin/User.
+- Added Entity models for category, accessory and Sets
+- Installed components for php unit testing
 
 ## 1.0.1 - 2018-04-07
 ### Added
