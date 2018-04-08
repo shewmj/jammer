@@ -1,18 +1,18 @@
 <div class="container">
 	<div class="row">
 		<div class="col-8 offset-2 text-center">
-			<h1>Create Set</h1>
+			<h1>Edit Set</h1>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-8 offset-2">
-			<form action="AddSet" method="post" style="padding: 10%;">
+			<form action="EditSet" method="post" style="padding: 10%;">
 				<input type="hidden" name="id" value="{setNum}" />
 				<div class="form-row">
 					<div class="form-group col-4 offset-4">
 						<label for="inputProtein">Set name</label>
-						<input type="text" name="setname"><br>
+						<input type="text" name="setname" value="{setName}"><br>
 					</div>
 
 					<div class="form-group col-4 offset-4">
@@ -62,8 +62,9 @@
 					</div>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Create Set</button>
+				<button type="submit" class="btn btn-primary">Edit Set</button>
 			</form>
 		</div>
 	</div>
 </div>
+setEdit
