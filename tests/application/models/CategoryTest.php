@@ -24,20 +24,20 @@ class CategoryTest  extends TestCase {
 
     function testValidName() {
         $expected = 'Protein';
-        $this->cateory->name = $expected;
-        $this->assertEquals($expected, $this->cateory->name);
+        $this->category->name = $expected;
+        $this->assertEquals($expected, $this->category->name);
         $expected = 'Topping';
-        $this->cateory->name = $expected;
-        $this->assertEquals($expected, $this->cateory->name);
+        $this->category->name = $expected;
+        $this->assertEquals($expected, $this->category->name);
         $expected =  'Grain';
-        $this->cateory->name = $expected;
-        $this->assertEquals($expected, $this->cateory->name);
+        $this->category->name = $expected;
+        $this->assertEquals($expected, $this->category->name);
         $expected = 'Veggie';
-        $this->cateory->name = $expected;
-        $this->assertEquals($expected, $this->cateory->name);
+        $this->category->name = $expected;
+        $this->assertEquals($expected, $this->category->name);
         $expected = 'Sauce';
-        $this->cateory->name = $expected;
-        $this->assertEquals($expected, $this->cateory->name);
+        $this->category->name = $expected;
+        $this->assertEquals($expected, $this->category->name);
     }
 
     function testInvalidCategoryThrowsException() {

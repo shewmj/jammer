@@ -8,7 +8,7 @@ class SetEntTest  extends TestCase {
     function setUp() {
         $this->CI = &get_instance();
         $this->CI->load->model('setent');
-        $this->setent = new SetEnt();
+        $this->setent = new Setent();
     }
 
     function testValidId() {
