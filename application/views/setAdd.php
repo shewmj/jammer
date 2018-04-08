@@ -25,21 +25,21 @@
 						</select>
 					</div>
 					<div class="form-group col-4 offset-4">
-						<label for="inputGrain">Grain</label>
-						<select name="grain" id="inputGrain" class="form-control">
-							<option selected></option>
-							{grains}
-								{item}
-							{/grains}
-						</select>
-					</div>
-					<div class="form-group col-4 offset-4">
 						<label for="inputTopping">Topping</label>
 						<select name="topping" id="inputTopping" class="form-control">
 							<option selected></option>
 							{toppings}
 								{item}
 							{/toppings}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputGrain">Grain</label>
+						<select name="grain" id="inputGrain" class="form-control">
+							<option selected></option>
+							{grains}
+								{item}
+							{/grains}
 						</select>
 					</div>
 					<div class="form-group col-4 offset-4">

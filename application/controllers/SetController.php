@@ -81,7 +81,7 @@ class SetController extends Application
 		}
 
 		$selectedSet = $this->Set->get($setID);
-		var_dump($selectedSet);
+		
 
 		$proteins = array();
 		$grains = array();
@@ -197,7 +197,7 @@ class SetController extends Application
 		$existingSet = (object) $existingSet;  
 		
 		//validate
-		if ($this->form_validation->run() {	
+		if ($this->form_validation->run()) {	
 			$this->Set->update($existingSet);	
 		} else {
 			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
