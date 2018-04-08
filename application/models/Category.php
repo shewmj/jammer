@@ -1,9 +1,9 @@
 <?php
-class Category extends CSV_Model
+class Category extends Entity
 {
 
-	public $id;
-	public $name;
+	protected $id;
+	protected $name;
 
   // insist that an ID be present
   public function setId($value) {

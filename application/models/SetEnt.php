@@ -2,8 +2,8 @@
 class SetEnt extends Entity
 {
 
-    public $id; // PK
-    public $name;
+    protected $id; // PK
+    protected $name;
     // FKs
     public $Protein;
     public $Topping;
@@ -11,7 +11,6 @@ class SetEnt extends Entity
     public $Veggie;
     public $Sauce;
 
-    public $Accesory;
 
     // insist that an ID be present
     public function setId($value) {
