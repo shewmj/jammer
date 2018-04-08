@@ -11,18 +11,54 @@
 				<input type="hidden" name="id" value="" />
 				<div class="form-row">
 					<div class="form-group col-4 offset-4">
-						<label for="inputScope">Scope</label>
-						<select name="sight" id="inputScope" class="form-control">
+						<label for="inputProtein">Protein</label>
+						<select name="protein" id="inputProtein" class="form-control">
 							<option selected></option>
 							{proteins}
-								{name}
+								{item}
 							{/proteins}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputGrain">Grain</label>
+						<select name="grain" id="inputGrain" class="form-control">
+							<option selected></option>
+							{grains}
+								{item}
+							{/grains}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputTopping">Topping</label>
+						<select name="topping" id="inputTopping" class="form-control">
+							<option selected></option>
+							{toppings}
+								{item}
+							{/toppings}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputVeggie">Veggie</label>
+						<select name="veggie" id="inputVeggie" class="form-control">
+							<option selected></option>
+							{veggies}
+								{item}
+							{/veggies}
+						</select>
+					</div>
+					<div class="form-group col-4 offset-4">
+						<label for="inputSauce">Sauce</label>
+						<select name="sauce" id="inputSauce" class="form-control">
+							<option selected></option>
+							{sauces}
+								{item}
+							{/sauces}
 						</select>
 					</div>
 				</div>
 
-				{temp}
-				
+
+
 				<button type="submit" class="btn btn-primary">Create Set</button>
 			</form>
 		</div>

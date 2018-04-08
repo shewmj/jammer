@@ -25,22 +25,43 @@ class SetController extends Application
 		// $this->data['sauce'] = $this->Accessories->get($setSelected->sauce)->imagelocation;
 
 		$proteins = array();
+		$grains = array();
+		$toppings = array();
+		$veggies = array();
+		$sauces = array();
 
 		$items = $this->Accessories->all();
 
-		for ($x = 1; $x <= 10; $x++) {
+		for ($x = 1; $x <= sizeof($items); $x++) {
 			$temp = $this->Accessories->get($x);
-			$categoryTemp = $this->Accessories->get($x)->category;
 
-			if ($categoryTemp == 'protein') {
-				$proteins[] = $temp;
+			$currItem = array('item' => '<option value="' . $temp->id . '">' . $temp->name . '</option>');
+
+			if ($temp->category == "Protein") {
+				$proteins[] = $currItem;
+			}
+			if ($temp->category == "Grain") {
+				$grains[] = $currItem;
+			}
+			if ($temp->category == "Topping") {
+				$toppings[] = $currItem;
+			}
+			if ($temp->category == "Veggie") {
+				$veggies[] = $currItem;
+			}
+			if ($temp->category == "Sauce") {
+				$sauces[] = $currItem;
 			}
 
 		}
 
 		$this->data['proteins'] = $proteins;
+		$this->data['grains'] = $grains;
+		$this->data['toppings'] = $toppings;
+		$this->data['veggies'] = $veggies;
+		$this->data['sauces'] = $sauces;
 
-		$this->data['temp'] = "hiya";
+
 
 
 // $items = array();
@@ -49,13 +70,13 @@ class SetController extends Application
 //     $items[] = $row;
 // }
 
-		
+
 		//inject selected set name to view
 		// $setSelected = $this->Set->get($item);
 		// $this->data['name'] = $setSelected->name;
 
 		// Get the image urls for the accessories
-		
+
 
 
 		$this->data['pagetitle'] = 'Create';
@@ -107,7 +128,7 @@ class SetController extends Application
 	// 		{
 	// 			$this->SetModel->update($sets);
 	// 		}
-	// 	} 
+	// 	}
 	// 	else
 	// 	{
 	// 		$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
@@ -123,7 +144,7 @@ class SetController extends Application
 		{
 			return;
 		}
-		
+
 		$this->data['pagetitle'] = 'Edit Set ' . $set;
 		$this->data['pagebody'] = 'SetEdit';
 		$this->render();
@@ -140,5 +161,5 @@ class SetController extends Application
 		}
 		return $tmp;
 	}
-	
+
 }
