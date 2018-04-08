@@ -15,4 +15,19 @@ class Set extends CSV_Model
     {
         parent::__construct("../data/BowlSet.csv", 'id');
     }
+
+
+
+
+    public function rules() {
+        $config = array(
+            ['field' => 'ProteinID', 'label' => 'protein', 'rules' => 'integer'],
+            ['field' => 'GrainID', 'label' => 'grain', 'rules' => 'integer'],
+            ['field' => 'ToppingID', 'label' => 'topping', 'rules' => 'integer'],
+            ['field' => 'VeggieID', 'label' => 'veggie', 'rules' => 'integer'],
+            ['field' => 'SauceID', 'label' => 'sauce', 'rules' => 'integer'],
+        );
+        return $config;
+    }
+
 }

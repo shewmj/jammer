@@ -52,7 +52,6 @@ class SetController extends Application
 			if ($temp->category == "Sauce") {
 				$sauces[] = $currItem;
 			}
-
 		}
 
 		$this->data['proteins'] = $proteins;
@@ -61,80 +60,87 @@ class SetController extends Application
 		$this->data['veggies'] = $veggies;
 		$this->data['sauces'] = $sauces;
 
-
-
-
-// $items = array();
-
-// while($row = mysql_fetch_array($result, MYSQL_BOTH)) {
-//     $items[] = $row;
-// }
-
-
-		//inject selected set name to view
-		// $setSelected = $this->Set->get($item);
-		// $this->data['name'] = $setSelected->name;
-
-		// Get the image urls for the accessories
-
-
+		$this->data['setNum'] = sizeof($items = $this->Set->all()) + 1;
 
 		$this->data['pagetitle'] = 'Create';
 		$this->data['pagebody'] = 'setAdd';
-		// $this->load->model('SightModel');
-		// $this->load->model('StockModel');
-		// $this->load->model('BodyModel');
-		// $this->load->model('BarrelModel');
-		// $this->load->model('GripModel');
-		// $sights = $this->loadModelIntoArray($this->SightModel->all());
-		// $stocks = $this->loadModelIntoArray($this->StockModel->all());
-		// $bodies = $this->loadModelIntoArray($this->BodyModel->all());
-		// $barrels = $this->loadModelIntoArray($this->BarrelModel->all());
-		// $grips = $this->loadModelIntoArray($this->GripModel->all());
-		// $this->data['sights'] = $sights;
-		// $this->data['stocks'] = $stocks;
-		// $this->data['bodies'] = $bodies;
-		// $this->data['barrels'] = $barrels;
-		// $this->data['grips'] = $grips;
+		
 		$this->render();
 	}
 
-	// public function Add()
-	// {
-	// 	$role = $this->session->userdata('userrole');
-	// 	if ($role == ROLE_GUEST)
-	// 	{
-	// 		redirect($_SERVER['HTTP_REFERER']); // back where we came from
-	// 		return;
-	// 	}
-	// 	$this->load->model('SetModel');
-	// 	$this->load->library('form_validation');
-	// 	$this->form_validation->set_rules($this->SetModel->rules());
-	// 	$sets = (array) $this->SetModel->create();
-	// 	var_dump($sets);
-	// 	$sets = $this->input->post();
-	// 	var_dump($sets);
-	// 	$sets = (object) $sets;  // convert back to object
-	// 	// validate away
-	// 	if ($this->form_validation->run())
-	// 	{
-	// 		if (empty($sets->id))
-	// 		{
-	// 			$sets->id = $this->SetModel->highest() + 1;
-	// 			var_dump($sets);
-	// 			$this->SetModel->add($sets);
-	// 		}
-	// 		else
-	// 		{
-	// 			$this->SetModel->update($sets);
-	// 		}
-	// 	}
-	// 	else
-	// 	{
-	// 		$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
-	// 	}
-	// 	redirect('/set/' . $this->SetModel->highest());
-	// }
+
+
+
+
+
+
+
+	public function AddSet()
+	{
+		$role = $this->session->userdata('userrole');
+		if ($role == ROLE_GUEST)
+		{
+			redirect($_SERVER['HTTP_REFERER']); // back where we came from
+			return;
+		}
+
+
+
+		$this->load->model('Set');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules($this->Set->rules());
+		// $sets = (array) $this->Set->create();
+		//var_dump($sets);
+		$newSet = $this->input->post();
+		var_dump($newSet);
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		$newSet = (object) $newSet;  // convert back to object
+		// validate away
+		if ($this->form_validation->run())
+		{
+			
+			$this->Set->add($newSet);
+			
+		} 
+		else
+		{
+			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
+		}
+
+
+
+		redirect('/Welcome/set/' .  $this->Set->highest());
+
+
+
+	}
+
+
+
+
+
+
+
+
+
 
 
 	public function Edit($set)

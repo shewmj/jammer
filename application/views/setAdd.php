@@ -7,9 +7,14 @@
 
 	<div class="row">
 		<div class="col-8 offset-2">
-			<form action="Add" method="post" style="padding: 10%;">
-				<input type="hidden" name="id" value="" />
+			<form action="AddSet" method="post" style="padding: 10%;">
+				<input type="hidden" name="id" value="{setNum}" />
 				<div class="form-row">
+					<div class="form-group col-4 offset-4">
+						<label for="inputProtein">Set name</label>
+						<input type="text" name="setname"><br>
+					</div>
+
 					<div class="form-group col-4 offset-4">
 						<label for="inputProtein">Protein</label>
 						<select name="protein" id="inputProtein" class="form-control">
@@ -56,8 +61,6 @@
 						</select>
 					</div>
 				</div>
-
-
 
 				<button type="submit" class="btn btn-primary">Create Set</button>
 			</form>
