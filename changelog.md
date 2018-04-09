@@ -12,10 +12,62 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Released]
+
+## 2.0.0 - 2018-04-08
+Completed data modeling, form validation and php unit testing of
+Assignment 02 website.
+
 ## 1.0.0 - 2018-02-11
 Completed rudimentary layout of Assignment 01 website.
 
 ## [Unreleased]
+
+## 1.0.5 - 2018-04-08
+### Added
+- Added view to edit existing sets
+
+### Modified
+- Fix view errors for editing and creating sets
+
+### Deleted
+- Remove test set entries
+
+## 1.0.4 - 2018-04-07
+### Added
+- Added controller to create new sets
+- Added view to create new sets
+
+### Modified
+
+### Deleted
+
+## 1.0.3 - 2018-04-07
+### Added
+- Added dropdowns of items to create sets
+- Added PHP unit tests for Entity models
+
+### Modified
+- Corrected entity model errors
+
+### Deleted
+
+## 1.0.2 - 2018-04-07
+### Added
+- Added Create and Edit Set buttons that show up for Admin/User.
+- Added Entity models for category, accessory and Sets
+- Installed components for php unit testing
+
+### Modified
+
+### Deleted
+
+## 1.0.1 - 2018-04-07
+### Added
+- Added user roles
+
+### Modified
+
+### Deleted
 
 ## 0.0.4 - 2018-02-11
 ### Added

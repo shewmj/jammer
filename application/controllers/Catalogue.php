@@ -1,8 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+* Controller to access bowl items (Accessories) in a database.
+*/
 class Catalogue extends Application
 {
-	
+
+	/**
+	 * Constructor for Catalogue Controller.
+	 */
 	function __construct()
 	{
 		parent::__construct();
@@ -10,7 +17,7 @@ class Catalogue extends Application
 
 	/**
 	 * Grabs all of the accessories informations and passes it
-	 * to the catelogue view
+	 * to the catalogue view
 	 */
 	public function index()
 	{
