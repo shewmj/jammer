@@ -8,7 +8,7 @@ class SetController extends Application
 {
 
 	/*
-	Sets up the view to add a new set	
+	Sets up the view to add a new set
 	*/
 	public function Add()
 	{
@@ -61,13 +61,13 @@ class SetController extends Application
 		$this->data['setNum'] = sizeof($items = $this->Set->all()) + 1;
 		$this->data['pagetitle'] = 'Create';
 		$this->data['pagebody'] = 'setAdd';
-		
+
 		$this->render();
 	}
 
 
 	/*
-	Sets up the view to edit a existing set	
+	Sets up the view to edit a existing set
 
 	$setID - the id of the set being edited
 	*/
@@ -81,7 +81,7 @@ class SetController extends Application
 		}
 
 		$selectedSet = $this->Set->get($setID);
-		
+
 
 		$proteins = array();
 		$grains = array();
@@ -91,14 +91,14 @@ class SetController extends Application
 
 		$items = $this->Accessories->all();
 
-		//sort accessories into categories 
+		//sort accessories into categories
 		for ($x = 1; $x <= sizeof($items); $x++) {
 			$temp = $this->Accessories->get($x);
 
-			if ($selectedSet->protein == $temp->id 
-				|| $selectedSet->grain == $temp->id 
-				|| $selectedSet->topping == $temp->id 
-				|| $selectedSet->veggie == $temp->id 
+			if ($selectedSet->protein == $temp->id
+				|| $selectedSet->grain == $temp->id
+				|| $selectedSet->topping == $temp->id
+				|| $selectedSet->veggie == $temp->id
 				|| $selectedSet->sauce == $temp->id ) {
 				$currItem = array('item' => '<option selected value="' . $temp->id . '">' . $temp->name . '</option>');
 			} else {
@@ -133,7 +133,7 @@ class SetController extends Application
 		$this->data['setName'] = $selectedSet->name;
 		$this->data['pagetitle'] = 'Edit';
 		$this->data['pagebody'] = 'setEdit';
-		
+
 		$this->render();
 	}
 
@@ -155,15 +155,14 @@ class SetController extends Application
 		$this->load->model('Set');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->Set->rules());
-		
+
 		//retrieve data
 		$newSet = $this->input->post();
-		var_dump($newSet);
-		$newSet = (object) $newSet;  
+		$newSet = (object) $newSet;
 
 		//validate
-		if ($this->form_validation->run()) {	
-			$this->Set->add($newSet);	
+		if ($this->form_validation->run()) {
+			$this->Set->add($newSet);
 		} else {
 			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
 		}
@@ -189,16 +188,14 @@ class SetController extends Application
 		$this->load->model('Set');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->Set->rules());
-	
+
 		//retrieve data
 		$existingSet = $this->input->post();
-		var_dump($existingSet);
+		$existingSet = (object) $existingSet;
 
-		$existingSet = (object) $existingSet;  
-		
 		//validate
-		if ($this->form_validation->run()) {	
-			$this->Set->update($existingSet);	
+		if ($this->form_validation->run()) {
+			$this->Set->update($existingSet);
 		} else {
 			$this->alert('<strong>Validation errors!<strong><br>' . validation_errors(), 'danger');
 		}
