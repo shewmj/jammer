@@ -1,7 +1,10 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+* Controller to get information about a bowl set and view existings sets of
+* bowl items in the 'database' to display to user.
+*/
 class Welcome extends Application
 {
 

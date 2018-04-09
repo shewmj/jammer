@@ -1,5 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+* Controller to access information about a set of items.
+*/
 class Info extends Application
 {
     /**
@@ -42,7 +46,7 @@ class Info extends Application
     }
 
     /**
-     * Returns the designated catelog item if found,
+     * Returns the designated catalog item if found,
      * or all of them if one was not found.
      */
     public function catelog($key = NULL)
@@ -100,5 +104,4 @@ class Info extends Application
             echo json_encode($sets);
         }
     }
-    
 }
