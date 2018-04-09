@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Released]
 
+## 2.0.0 - 2018-04-08
+Completed data modeling, form validation and php unit testing of
+Assignment 02 website.
+
 ## 1.0.0 - 2018-02-11
 Completed rudimentary layout of Assignment 01 website.
 
