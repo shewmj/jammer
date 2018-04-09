@@ -2,13 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
-Controller to add new sets and edit existings sets of bowl items in the 'database'
+* Controller to add new sets and edit existings sets of bowl items in the 'database'
 **/
 class SetController extends Application
 {
 
 	/*
-	Sets up the view to add a new set
+	* Sets up the view to add a new set
 	*/
 	public function Add()
 	{
@@ -66,10 +66,10 @@ class SetController extends Application
 	}
 
 
-	/*
-	Sets up the view to edit a existing set
-
-	$setID - the id of the set being edited
+	/**
+	* Sets up the view to edit a existing set
+	*
+	* @param $setID - the id of the set being edited
 	*/
 	public function Edit($setID)
 	{
@@ -96,10 +96,10 @@ class SetController extends Application
 			$temp = $this->Accessories->get($x);
 
 			if ($selectedSet->protein == $temp->id
-				|| $selectedSet->grain == $temp->id
-				|| $selectedSet->topping == $temp->id
-				|| $selectedSet->veggie == $temp->id
-				|| $selectedSet->sauce == $temp->id ) {
+			|| $selectedSet->grain == $temp->id
+			|| $selectedSet->topping == $temp->id
+			|| $selectedSet->veggie == $temp->id
+			|| $selectedSet->sauce == $temp->id ) {
 				$currItem = array('item' => '<option selected value="' . $temp->id . '">' . $temp->name . '</option>');
 			} else {
 				$currItem = array('item' => '<option value="' . $temp->id . '">' . $temp->name . '</option>');
@@ -137,11 +137,8 @@ class SetController extends Application
 		$this->render();
 	}
 
-
-
-
-	/*
-	Retrieves data from the input form and validates to create a new set
+	/**
+	*  Retrieves data from the input form and validates to create a new set
 	*/
 	public function AddSet()
 	{
@@ -170,9 +167,8 @@ class SetController extends Application
 		redirect('/Welcome/set/' .  $this->Set->highest());
 	}
 
-
-	/*
-	Retrieves data from the input form and validates to edit a existing set
+	/**
+	* Retrieves data from the input form and validates to edit a existing set
 	*/
 	public function EditSet()
 	{
@@ -183,7 +179,6 @@ class SetController extends Application
 			redirect($_SERVER['HTTP_REFERER']); // back where we came from
 			return;
 		}
-
 
 		$this->load->model('Set');
 		$this->load->library('form_validation');
@@ -201,5 +196,4 @@ class SetController extends Application
 		}
 		redirect('/Welcome/set/' . $existingSet->id);
 	}
-
 }
